@@ -2,5 +2,10 @@
 <project version="4">
   <component name="SonarLintProjectSettings">
     <option name="bindingSuggestionsEnabled" value="false" />
+    <option name="moduleMapping">
+      <map>
+        <entry key="chain-of-responsibility" value="refactor" />
+      </map>
+    </option>
   </component>
 </project>
