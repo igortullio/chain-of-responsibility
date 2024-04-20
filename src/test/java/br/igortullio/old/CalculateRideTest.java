@@ -28,12 +28,12 @@ class CalculateRideTest {
 
   static Stream<Arguments> deveCalcularValorCorrida() {
     return Stream.of(
-        Arguments.of(10, LocalDateTime.of(2021, Month.MARCH, 1, 10, 0), BigDecimal.valueOf(21.0)),
-        Arguments.of(10, LocalDateTime.of(2021, Month.MARCH, 1, 23, 0), BigDecimal.valueOf(39.0)),
-        Arguments.of(10, LocalDateTime.of(2021, Month.MARCH, 1, 5, 0), BigDecimal.valueOf(39.0)),
-        Arguments.of(10, LocalDateTime.of(2021, Month.MARCH, 7, 10, 0), BigDecimal.valueOf(29.0)),
-        Arguments.of(10, LocalDateTime.of(2021, Month.MARCH, 7, 23, 0), BigDecimal.valueOf(50.0)),
-        Arguments.of(1, LocalDateTime.of(2021, Month.MARCH, 1, 10, 0), BigDecimal.valueOf(10.0))
+        Arguments.of(10, LocalDateTime.of(2024, Month.JANUARY, 1, 10, 0), BigDecimal.valueOf(21.0)),
+        Arguments.of(10, LocalDateTime.of(2024, Month.JANUARY, 1, 23, 0), BigDecimal.valueOf(39.0)),
+        Arguments.of(10, LocalDateTime.of(2024, Month.JANUARY, 1, 5, 0), BigDecimal.valueOf(39.0)),
+        Arguments.of(10, LocalDateTime.of(2024, Month.JANUARY, 7, 10, 0), BigDecimal.valueOf(29.0)),
+        Arguments.of(10, LocalDateTime.of(2024, Month.JANUARY, 7, 23, 0), BigDecimal.valueOf(50.0)),
+        Arguments.of(1, LocalDateTime.of(2024, Month.JANUARY, 1, 10, 0), BigDecimal.valueOf(10.0))
     );
   }
 
@@ -50,8 +50,8 @@ class CalculateRideTest {
 
   static Stream<Arguments> naodeveCalcularValorCorrida() {
     return Stream.of(
-        Arguments.of(null, LocalDateTime.of(2021, Month.MARCH, 1, 10, 0), BigDecimal.valueOf(-1.0)),
-        Arguments.of(-10, LocalDateTime.of(2021, Month.MARCH, 1, 10, 0), BigDecimal.valueOf(-1.0)),
+        Arguments.of(null, LocalDateTime.of(2024, Month.JANUARY, 1, 10, 0), BigDecimal.valueOf(-1.0)),
+        Arguments.of(-10, LocalDateTime.of(2024, Month.JANUARY, 1, 10, 0), BigDecimal.valueOf(-1.0)),
         Arguments.of(10, null, BigDecimal.valueOf(-2.0))
     );
   }

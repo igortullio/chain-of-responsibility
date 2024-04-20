@@ -34,13 +34,13 @@ class RideTest {
 
   static Stream<Arguments> shouldCalculateRideFare() {
     return Stream.of(
-        Arguments.of(10, LocalDateTime.of(2021, Month.MARCH, 1, 10, 0), BigDecimal.valueOf(21.0)),
-        Arguments.of(10, LocalDateTime.of(2021, Month.MARCH, 1, 23, 0), BigDecimal.valueOf(39.0)),
-        Arguments.of(10, LocalDateTime.of(2021, Month.MARCH, 1, 5, 0), BigDecimal.valueOf(39.0)),
-        Arguments.of(10, LocalDateTime.of(2021, Month.MARCH, 7, 10, 0), BigDecimal.valueOf(29.0)),
-        Arguments.of(10, LocalDateTime.of(2021, Month.MARCH, 7, 23, 0), BigDecimal.valueOf(50.0)),
-        Arguments.of(1, LocalDateTime.of(2021, Month.MARCH, 1, 10, 0), BigDecimal.valueOf(10.0)),
-        Arguments.of(153, LocalDateTime.of(2021, Month.MARCH, 5, 12, 0), BigDecimal.valueOf(153.0))
+        Arguments.of(10, LocalDateTime.of(2024, Month.JANUARY, 1, 10, 0), BigDecimal.valueOf(21.0)),
+        Arguments.of(10, LocalDateTime.of(2024, Month.JANUARY, 1, 23, 0), BigDecimal.valueOf(39.0)),
+        Arguments.of(10, LocalDateTime.of(2024, Month.JANUARY, 1, 5, 0), BigDecimal.valueOf(39.0)),
+        Arguments.of(10, LocalDateTime.of(2024, Month.JANUARY, 7, 10, 0), BigDecimal.valueOf(29.0)),
+        Arguments.of(10, LocalDateTime.of(2024, Month.JANUARY, 7, 23, 0), BigDecimal.valueOf(50.0)),
+        Arguments.of(1, LocalDateTime.of(2024, Month.JANUARY, 1, 10, 0), BigDecimal.valueOf(10.0)),
+        Arguments.of(153, LocalDateTime.of(2024, Month.JANUARY, 5, 12, 0), BigDecimal.valueOf(153.0))
     );
   }
 
