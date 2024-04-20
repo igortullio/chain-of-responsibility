@@ -1,0 +1,9 @@
+
+—
+java:S1104"TMake segments a static final constant or non-public and provide accessors if needed.(ŒËê8ÔùÈÁï1J$eba1b322-133b-4356-9a32-d5152919636d
+œ
+java:S1104"TMake distance a static final constant or non-public and provide accessors if needed.(ÒÓá¿ÿÿÿÿÿ8ÔùÈÁï1J$b6f0829c-f522-49b9-8f6c-fc6f7832b18d
+—
+java:S1104"TMake dateTime a static final constant or non-public and provide accessors if needed.(Úë¥æ8ÔùÈÁï1J$bb39e6c3-5199-45a6-b715-b6aca1dad716
+š
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(„ä‡Èûÿÿÿÿ8ÉúÈÁï1J$4b6ec29d-20fd-4ff6-87d4-dc69460bebd0
