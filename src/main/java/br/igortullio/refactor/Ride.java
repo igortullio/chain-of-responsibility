@@ -20,22 +20,21 @@ public class Ride {
   }
 
   public BigDecimal getFare() {
-    return fare;
+    return fare.setScale(1, RoundingMode.HALF_UP);
   }
 
   public void addSegment(int distance, LocalDateTime dateTime) {
     Segment segment = new Segment(distance, dateTime);
     this.segments.add(segment);
+    this.calculateFare();
   }
 
-  public void calculateFare() {
-    this.fare = new BigDecimal(0);
-    for (Segment segment : segments) {
-      this.fare = this.fare.add(fareCalculator.calculateFare(segment));
-    }
+  private void calculateFare() {
+    BigDecimal newFare = segments.stream()
+        .map(fareCalculator::calculateFare)
+        .reduce(BigDecimal.ZERO, BigDecimal::add);
 
-    this.fare = fare.compareTo(BigDecimal.valueOf(10)) < 0 ? BigDecimal.valueOf(10) : fare;
-    this.fare = fare.setScale(1, RoundingMode.HALF_UP);
+    this.fare = newFare.compareTo(BigDecimal.valueOf(10)) < 0 ? BigDecimal.valueOf(10) : newFare;
   }
 
 }

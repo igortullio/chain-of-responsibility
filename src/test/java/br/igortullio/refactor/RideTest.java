@@ -25,9 +25,7 @@ class RideTest {
   @ParameterizedTest
   @MethodSource
   void shouldCalculateRideFare(int distance, LocalDateTime dateTime, BigDecimal expected) {
-    ride.addSegment(distance, dateTime);
-
-    ride.calculateFare();
+    ride.addSegment(distance, dateTime);;
 
     assertEquals(expected, ride.getFare());
   }

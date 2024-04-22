@@ -17,7 +17,7 @@ class CalculateRideTest {
 
   @ParameterizedTest
   @MethodSource
-  void deveCalcularValorCorrida(int dist, LocalDateTime ds, BigDecimal expected) {
+  void shouldCalculateRideFare(int dist, LocalDateTime ds, BigDecimal expected) {
     Input input = CalculateRideInputProvider.create();
     input.movArray.add(MovProvider.create(dist, ds));
 
@@ -26,7 +26,7 @@ class CalculateRideTest {
     assertEquals(expected, response);
   }
 
-  static Stream<Arguments> deveCalcularValorCorrida() {
+  static Stream<Arguments> shouldCalculateRideFare() {
     return Stream.of(
         Arguments.of(10, LocalDateTime.of(2024, Month.JANUARY, 1, 10, 0), BigDecimal.valueOf(21.0)),
         Arguments.of(10, LocalDateTime.of(2024, Month.JANUARY, 1, 23, 0), BigDecimal.valueOf(39.0)),
@@ -39,7 +39,7 @@ class CalculateRideTest {
 
   @ParameterizedTest
   @MethodSource
-  void naodeveCalcularValorCorrida(Integer dist, LocalDateTime ds, BigDecimal expected) {
+  void naoShouldCalculateRideFare(Integer dist, LocalDateTime ds, BigDecimal expected) {
     Input input = CalculateRideInputProvider.create();
     input.movArray.add(MovProvider.create(dist, ds));
 
@@ -48,7 +48,7 @@ class CalculateRideTest {
     assertEquals(expected, response);
   }
 
-  static Stream<Arguments> naodeveCalcularValorCorrida() {
+  static Stream<Arguments> naoShouldCalculateRideFare() {
     return Stream.of(
         Arguments.of(null, LocalDateTime.of(2024, Month.JANUARY, 1, 10, 0), BigDecimal.valueOf(-1.0)),
         Arguments.of(-10, LocalDateTime.of(2024, Month.JANUARY, 1, 10, 0), BigDecimal.valueOf(-1.0)),
