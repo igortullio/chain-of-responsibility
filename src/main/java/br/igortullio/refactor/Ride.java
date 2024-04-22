@@ -34,7 +34,7 @@ public class Ride {
         .map(fareCalculator::calculateFare)
         .reduce(BigDecimal.ZERO, BigDecimal::add);
 
-    this.fare = newFare.compareTo(BigDecimal.valueOf(10)) < 0 ? BigDecimal.valueOf(10) : newFare;
+    this.fare = newFare.compareTo(BigDecimal.TEN) < 0 ? BigDecimal.TEN : newFare;
   }
 
 }
